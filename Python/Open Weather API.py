@@ -45,7 +45,7 @@ final_city_list = []
 for j in range (0, len(city_l)):
 
 # Calling the API using a private key
-    api_key = '7fd3b2465d0db40c14998ddab3ca7f9c'
+    api_key = 
     URL = 'https://api.openweathermap.org/data/2.5/forecast?'
     URL = URL + 'q=' + city_l[j] + '&units=metric&appid=' + api_key
 
