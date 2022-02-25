@@ -49,47 +49,56 @@ display_board()
 
 Cost1 = ["Brand", "Caitlyn", "Camille", "Darius", "Ezreal", "Illaoi", "Jarvan", "Kassadin", "Nocturne", "Poppy", "Singed", "Twitch", "Ziggs"]
 Cost1_qty = 29 * Cost1
+L1 = set(Cost1_qty)
 # 377 total
 
 Cost2 = ["Ashe", "Blitz", "Corki", "Lulu", "Quinn", "Rek_Sai", "Sejuani", "Swain", "Syndra", "Talon", "Warwick", "Zilean", "Zyra"]
-Cost2_qty = 22 * Cost2
+Cost2_qty= 22 * Cost2
+L2 = set(Cost2_qty)
 
 Cost3 = ["ChoGath", "Ekko", "Gangplank", "Gnar", "Leona", "Lucian", "Malzahar", "MissFortune", "Morgana", "Senna", "Tryndamere", "Vex", "Zac"]
 Cost3_qty = Cost3 * 18
+L3 = set(Cost3_qty)
 
 Cost4 = ["Ahri", "Alistar", "Braum", "Draven", "Irelia", "Jhin", "Kha'Zix", "Orianna", "RenataGlasc", "Seraphine", "Sivir", "Vi"]
 Cost4_qty = Cost4 * 12
+L4 = set(Cost4_qty)
 
 Cost5 = ["Galio", "Jayce", "Jinx", "Kai_sa", "Silco", "TahmKench", "Viktor", "Zeri"]
 Cost5_qty = Cost5 * 10
+L5 = set(Cost5_qty)
 
-Yordle_King = ["Veigar"]
-Yordle_King = Yordle_King * 10
+All_Champs = Cost1_qty + Cost2_qty + Cost3_qty + Cost4_qty + Cost5_qty
 
-Total_Champ_Pool = Cost1 + Cost2 + Cost3 + Cost4 + Cost5
-Total_Champ_Pool_qty = Cost1_qty + Cost2_qty + Cost3_qty + Cost4_qty + Cost5_qty
+
+
+# First 2 Shops
+random.choice(Cost1_qty, k = 5)
+
+
+#draw = random.uniform(low=0.0, high=1.0, size=None)
+#if draw <= 0.4:
+    #sample(Cost1_qty)
+
 
 
 # Shop Odds by Level
-# LVL_1_Shop = [Cost1_qty]      # 1:100 2:0 3:0 4:0 5:0
-# LVL_2_Shop = Cost1_qty      # 1:100 2:0 3:0 4:0 5:0
-LVL_3_Shop = Cost1_qty + Cost2_qty      # 1:75 2:25 3:0 4:0 5:0
-# LVL_4_Shop = Cost1_qty + Cost2_qty + Cost3_qty      # 1:55 2:30 3:15 4:0 5:0
-# LVL_5_Shop = Cost1_qty + Cost2_qty + Cost3_qty + Cost4_qty           # 1:45 2:33 3:20 4:2 5:0
-# LVL_6_Shop = Cost1_qty + Cost2_qty + Cost3_qty + Cost4_qty           # 1:25 2:40 3:30 4:5 5:0
-# LVL_7_Shop = Cost1_qty + Cost2_qty + Cost3_qty + Cost4_qty + Cost5_qty          # 1:19 2:30 3:35 4:15 5:1
-# LVL_8_Shop = Cost1_qty + Cost2_qty + Cost3_qty + Cost4_qty + Cost5_qty          # 1:16 2:20 3:35 4:25 5:4
-# LVL_9_Shop = Cost1_qty + Cost2_qty + Cost3_qty + Cost4_qty + Cost5_qty          # 1:9 2:15 3:30 4:30 5:16
+# 1:100 2:0 3:0 4:0 5:0
+# 1:100 2:0 3:0 4:0 5:0
+# 1:75 2:25 3:0 4:0 5:0
+# 1:55 2:30 3:15 4:0 5:0
+# 1:45 2:33 3:20 4:2 5:0
+# 1:25 2:40 3:30 4:5 5:0
+# 1:19 2:30 3:35 4:15 5:1
+# 1:16 2:20 3:35 4:25 5:4
+# 1:9 2:15 3:30 4:30 5:16
 
 # random.choices(population, weights=None, *, cum_weights=None, k=1)
 
 # Choose elements with different probabilities
 
-Shop_1 = np.random.choice(Cost1_qty, size = 5, replace = False)
-print(Shop_1)
+#L1.pop() for i in range (5)
 
-Shop_3 = np.random.choice(LVL_3_Shop, size = 5, replace = False)
-print(Shop_3)
 
 def move_piece(current_player):
     global possible_moves
