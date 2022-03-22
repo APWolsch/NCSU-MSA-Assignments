@@ -15,6 +15,13 @@ possible_moves = ['BS1', 'BS2', 'BS3', 'BS4', 'BS5', 'R', 'L',
                   'SB1', 'SB2', 'SB3', 'SB4', 'SB5', 'SB6', 'SB7', 'SB8', 'SB9',
                   'End']
 
+# BS = Buy Shop
+# R = Refresh
+# L = Level (Buy XP)
+# SA = Sell Active (Slot #)
+# SB = Sell Bench (Slot #)
+# End = End Turn
+
 all_slots = {'A1': "-",'A2': "-",'A3': "-",
             'A4': "-",'A5': "-",'A6': "-",
             'A7': "-",'A8': "-",'A9': "-",
